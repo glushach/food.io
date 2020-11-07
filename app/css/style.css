@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 15px;
+  
+}
+section {
+  text-align: center;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.hamburger {
+  display: none;
+}
+/*====== divider ======*/
+.divider {
+  overflow: hidden;
+  text-align: center;
+}
+.divider::before, .divider::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 590px;
+  height: 2px;
+  background-color:#949494;
+}
+.divider::before {
+  margin-left: -100%;
+  left: 7px;
+}
+.divider::after {
+  margin-right: -100%;
+  right: 7px;
+}
+
+.divider > div {
+  width: 57px;
+  height: 57px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 7px;
+}
+.divider > div > img {
+  width: 100%;
+  height: 100%;
+}
+/*====== title ======*/
+h2.title {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #949494;
+}
+
+/*====== Menu ======*/
+.header {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+}
+nav.menu {
+  width: 410px;
+}
+ul.menu__list {
+  display: flex;
+  justify-content: space-between;
+}
+ul.menu__list > li:hover {
+  transform: scale(1.1);
+}
+ul.menu__list > li > a {
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #949494;
+}
+
+/*====== section select ======*/
+.select {
+  display: flex;
+  justify-content: space-between;
+}
+.select__item {
+  width: 625px;
+  height: 472px;
+  position: relative;
+}
+.select > .background-left {
+  background: url('../img/select/background-left.png') center/cover no-repeat;
+}
+.select > .background-right {
+  background: url('../img/select/background-right.png') center/cover no-repeat;
+}
+.select__item > .item__inner {
+  width: 100%;
+  text-align: center;
+  height: 145px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.select__item > .item__inner h4, .select__item > .item__inner h3 {
+  font-size: 18.4px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #ffffff;
+}
+.select__item > .item__inner h3 {
+  font-size: 41.4px;
+  line-height: 48px;
+}
+.select__item > .item__inner > div {
+  max-width: 145px;
+  margin: 0 auto;
+  margin-top: 55px;
+}
+.select__item > .item__inner > div > img {
+  width: 100%;
+}
+
+@media (max-width: 1289px) {
+  /*====== section select ======*/
+  .select {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 15px;
+  }
+  .select__item {
+    margin-bottom: 15px;
+  }
+} /*end media 1289*/
+@media (max-width: 991px) {
+  /*code here*/
+} /*end media 991*/
+@media (max-width: 767px) {
+  /*====== section select ======*/
+  .select {
+    padding: 0;
+  }
+} /*end media 767*/
+@media (max-width: 575px) {
+    /*style hamburger */
+    .hamburger {
+      display: block;
+      position: relative;
+      right: 15px;
+      top: 50%;
+      width: 30px;
+      height: 18px;
+    }
+    .hamburger > span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #000000;
+      margin-bottom: 4px;
+      transition: 0.5s all;
+    }
+    .hamburger-active > span {
+      margin-bottom: -2px;
+    }
+    .hamburger-active > span:nth-child(1) {
+      transform: translateY(3px) rotate(-45deg);
+    }
+    .hamburger-active > span:nth-child(2) {
+      display: none;
+    }
+    .hamburger-active > span:nth-child(3) {
+      transform: translateY(3px) rotate(45deg);
+    }
+  /*====== Menu ======*/
+  .header {
+    min-height: 40px;
+    padding: 0px;
+    transition: 0.6s all;
+  }
+  nav.menu {
+    width: 100%;
+  }
+  ul.menu__list {
+    width: 70%;
+    display: none;
+    flex-direction: column;
+  }
+  ul.menu__list-active {
+    display: block;
+  }
+  ul.menu__list > li {
+    margin: 5px;
+  }
+  /*====== divider ======*/
+  .divider::before, .divider::after {
+    width: 290px;
+  }
+  /*====== section select ======*/
+  .select__item {
+    height: 345px;
+  }
+  .select__item > .item__inner h3 {
+    font-size: 35px;
+    line-height: 37px;
+  }
+} /*end media 575*/

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Food
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Roboto&display=swap")
+    link(rel="stylesheet", href="css/style.css")
+  body
+    .container
+      header.header
+        nav.menu
+          ul.menu__list
+            li
+              a.menu__link(href="#") Подбор рецептов
+            li
+              a.menu__link(href="#") Рецепты
+            li
+              a.menu__link(href="#") Горячие рецепты
+        .hamburger
+          span
+          span
+          span
+      section
+        .divider
+          div
+           img(src="img/logo-dividers.png", alt="")
+        h2.title Подбор рецептов
+        .select
+          .select__item.background-left
+            .item__inner
+              h4 Блюдо дня
+              h3 Куриные ножки на гриле
+              div
+                img(src="img/select/background-icon.png", alt="")
+          .select__item.background-right
+            .item__inner
+              h4 Лучшие рецепты недели
+              h3 7 лучших рецептов недели
+              div
+                img(src="img/select/background-icon.png", alt="")
+    script(src="js/script.js")
+
