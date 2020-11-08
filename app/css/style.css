@@ -191,6 +191,7 @@ ul.menu__list > li > a {
   nav.menu {
     width: 100%;
   }
+
   ul.menu__list {
     width: 70%;
     display: none;
@@ -198,10 +199,13 @@ ul.menu__list > li > a {
   }
   ul.menu__list-active {
     display: block;
+    animation-name: fade;
+    animation-duration: 2s;
   }
   ul.menu__list > li {
     margin: 5px;
   }
+  @keyframes fade{from{opacity: 0.1;}to{opacity: 1;}}
   /*====== divider ======*/
   .divider::before, .divider::after {
     width: 290px;
