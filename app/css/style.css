@@ -77,6 +77,9 @@ ul.menu__list {
   display: flex;
   justify-content: space-between;
 }
+ul.menu__list > li {
+  transition: 0.5s all;
+}
 ul.menu__list > li:hover {
   transform: scale(1.1);
 }
@@ -88,7 +91,7 @@ ul.menu__list > li > a {
   color: #949494;
 }
 
-/*====== section select ======*/
+/*====== section one - select ======*/
 .select {
   display: flex;
   justify-content: space-between;
@@ -132,24 +135,199 @@ ul.menu__list > li > a {
   width: 100%;
 }
 
-@media (max-width: 1289px) {
-  /*====== section select ======*/
-  .select {
+  /*====== section two - recipe ======*/
+  section.section__two {
+    margin-top: 20px;
+  }
+  ul.tab {
+    width: 471px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #f1f1f1;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+  }
+  li.tab__item {
+    width: 149px;
+    border: 1px solid #f1f1f1;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+    line-height: 37px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+    color: #5b5b5b;
+    cursor: pointer;
+    transition: 0.5s all;
+  }
+  ul.tab > li:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 20px #2f3032;
+  }
+  li.tab__item_active {
+    background-color: #2f3032;
+    border: none;
+    color: #ffffff;
+  }
+
+  .recipe__content {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card {
+     width: 622px;
+     min-height: 307px;
+     display: flex;
+  }
+  .card > .card__promo {
+    width: 306px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .card > .card__promo_left {
+    background: url('../img/recipe/bg/bg-left.png') center/cover no-repeat;
+  }
+  .card > .card__promo_right {
+    background: url('../img/recipe/bg/bg-right.png') center/cover no-repeat;
+  }
+  .card > .card__promo > .author {
+    display: flex;
+  }
+  .card > .card__promo > .author > .author__foto {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    margin: 0px 7px 20px 20px;
+  }
+  .card > .card__promo > .author > .author__foto > img {
+    width: 100%;
+    height: 100%;
+  }
+  .card > .card__promo > .author > .author__name {
+    line-height: 31px;
+    font-size: 18.4px;
+    font-weight: 400;
+    color: #bcbcbc;
+  }
+
+
+  .card > .card__description {
+    width: 315px;
+    border: 1px solid #949494;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card > .card__description > .card__description_inner {
+    padding: 20px 10px;
+  }
+
+  .card > .card__description > .card__description_inner > .description__title > h3 {
+    font-size: 24px;
+    line-height: 27px;
+    font-weight: 400;
+    color: #3d3d3d;
+    min-height: 81px;
+  }
+  .card > .card__description > .card__description_inner > .description__icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 11px;
+  }
+  .card > .card__description > .card__description_inner > .description__icons > .icons__item {
+    width: 90px;
+    height: 31px;
+  }
+  .card > .card__description > .card__description_inner > .description__icons > .icons__item > img {
+    width: 100%;
+    height: 100%;
+  }
+  .card > .card__description > .card__description_inner > .description__text {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: #5b5b5b;
+    text-align: left;
+  }
+
+
+  .card > .card__description > .card__footer {
+    border-top: 1px solid #949494;
+    padding-left: 20px;
+    padding-right: 30px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card > .card__description > .card__footer > .like__block, .card > .card__description > .card__footer > .social_block {
+    display: flex;
+  }
+  .card > .card__description > .card__footer > .like__block > .like {
+    margin-right: 5px;
+    width: 23px;
+    height: 19px;
+  }
+  .card > .card__description > .card__footer > .like__block > .like > img {
+    width: 100%;
+    height: 100%;
+  }
+  .card > .card__description > .card__footer > .like__block > .counter{
+    font-size: 14.8px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #9b9b9b;
+  }
+  .card > .card__description > .card__footer > .social_block {
+    width: 86px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+@media (max-width: 1390px) {
+  /*====== section one - select ======*/
+  /*======          AND         ======*/
+  /*====== section two - recipe ======*/
+  .select, .recipe__content {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 15px;
   }
-  .select__item {
+  .select__item, .card {
     margin-bottom: 15px;
   }
-} /*end media 1289*/
+
+} /*end media 1390*/
 @media (max-width: 991px) {
   /*code here*/
 } /*end media 991*/
 @media (max-width: 767px) {
-  /*====== section select ======*/
+  /*====== section one - select ======*/
   .select {
     padding: 0;
+  }
+  /*====== section two - recipe ======*/
+  .recipe__content {
+    padding: 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: auto;
+    flex-direction: column;
+  }
+  .card > .card__promo, .card > .card__description {
+    width: 316px;
+    min-height: 308px;
+    border-left: 1px solid #949494;
   }
 } /*end media 767*/
 @media (max-width: 575px) {
@@ -210,12 +388,21 @@ ul.menu__list > li > a {
   .divider::before, .divider::after {
     width: 290px;
   }
-  /*====== section select ======*/
+  /*====== section one - select ======*/
   .select__item {
     height: 345px;
   }
   .select__item > .item__inner h3 {
     font-size: 35px;
     line-height: 37px;
+  }
+  /*====== section two - recipe ======*/
+  ul.tab {
+    width: 149px;
+    height: 125px;
+    flex-direction: column;
+  }
+  .card > .card__promo, .card > .card__description {
+    width: 290px;
   }
 } /*end media 575*/
