@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+.mt-20 {
+  margin-top: 20px;
+}
 .container {
   max-width: 1290px;
   margin: 0 auto;
@@ -101,11 +104,10 @@ ul.menu__list > li > a {
   height: 472px;
   position: relative;
 }
-.select > .background-left {
-  background: url('../img/select/background-left.png') center/cover no-repeat;
-}
-.select > .background-right {
-  background: url('../img/select/background-right.png') center/cover no-repeat;
+.select__item > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .select__item > .item__inner {
   width: 100%;
@@ -136,9 +138,6 @@ ul.menu__list > li > a {
 }
 
   /*====== section two - recipe ======*/
-  section.section__two {
-    margin-top: 20px;
-  }
   ul.tab {
     width: 471px;
     height: 40px;
@@ -216,7 +215,7 @@ ul.menu__list > li > a {
 
   .card > .card__description {
     width: 315px;
-    border: 1px solid #949494;
+    border: 1px solid #f2f2f2;
     border-left: none;
     display: flex;
     flex-direction: column;
@@ -242,10 +241,25 @@ ul.menu__list > li > a {
   .card > .card__description > .card__description_inner > .description__icons > .icons__item {
     width: 90px;
     height: 31px;
+    border: 1px solid #e8e8e8;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
-  .card > .card__description > .card__description_inner > .description__icons > .icons__item > img {
+  .card > .card__description > .card__description_inner > .description__icons > .icons__item > div {
+    width: 20px;
+    height: 20px;
+  }
+  .card > .card__description > .card__description_inner > .description__icons > .icons__item > div > img {
     width: 100%;
     height: 100%;
+  }
+  .card > .card__description > .card__description_inner > .description__icons > .icons__item > span {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #b5904e;
   }
   .card > .card__description > .card__description_inner > .description__text {
     font-size: 16px;
@@ -258,7 +272,7 @@ ul.menu__list > li > a {
 
 
   .card > .card__description > .card__footer {
-    border-top: 1px solid #949494;
+    border-top: 1px solid #f2f2f2;
     padding-left: 20px;
     padding-right: 30px;
     height: 50px;
@@ -273,6 +287,7 @@ ul.menu__list > li > a {
     margin-right: 5px;
     width: 23px;
     height: 19px;
+    cursor: pointer;
   }
   .card > .card__description > .card__footer > .like__block > .like > img {
     width: 100%;
@@ -327,7 +342,7 @@ ul.menu__list > li > a {
   .card > .card__promo, .card > .card__description {
     width: 316px;
     min-height: 308px;
-    border-left: 1px solid #949494;
+    border-left: 1px solid #f2f2f2;
   }
 } /*end media 767*/
 @media (max-width: 575px) {
