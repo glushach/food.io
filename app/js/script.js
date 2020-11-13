@@ -1,9 +1,14 @@
 window.addEventListener('DOMContentLoaded', () => {
-  const menuItem = document.querySelector('.menu__list'),
-  hamburger = document.querySelector('.hamburger');
+  const menuItem = document.querySelectorAll('.menu__list'),
+  hamburger = document.querySelectorAll('.hamburger');
 
-  hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('hamburger-active');
-      menuItem.classList.toggle('menu__list-active');
+  hamburger.forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('hamburger-active');
+      menuItem.forEach(item => {
+        item.classList.toggle('menu__list-active');
+      });
+    });
   });
+
 });

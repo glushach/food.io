@@ -7,6 +7,9 @@
 .mt-20 {
   margin-top: 20px;
 }
+.mb-20 {
+  margin-bottom: 20px;
+}
 .container {
   max-width: 1290px;
   margin: 0 auto;
@@ -307,6 +310,49 @@ ul.menu__list > li > a {
 
 
 
+  /*====== section three - selection ======*/
+  .selection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px -5px;
+  }
+  .selection > .selection__item {
+    padding: 0px 5px;
+  }
+  .selection > .selection__item > .item__inner {
+    width: 307px;
+    height: 490px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .selection > .selection__item > .item__inner > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ 
+  .selection > .selection__item > .item__inner > h3 {
+    position:absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    font-size: 34.5px;
+    line-height: 41px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #f0f0f0;
+  }
+
+  /*====== footer ======*/
+  .space {
+    background-color: #252627;
+  }
+  .footer {
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+  }
 @media (max-width: 1390px) {
   /*====== section one - select ======*/
   /*======          AND         ======*/
@@ -419,5 +465,9 @@ ul.menu__list > li > a {
   }
   .card > .card__promo, .card > .card__description {
     width: 290px;
+  }
+  /*==== Footer ====*/
+  .footer .hamburger > span {
+    background: #949494;
   }
 } /*end media 575*/
