@@ -7,158 +7,161 @@ html(lang="en")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Roboto&display=swap")
     link(rel="stylesheet", href="css/style.css")
   body
-    .container
-      header.header
-        nav.menu
-          ul.menu__list
-            li
-              a.menu__link(href="#") Подбор рецептов
-            li
-              a.menu__link(href="#") Рецепты
-            li
-              a.menu__link(href="#") Горячие рецепты
-        .hamburger
-          span
-          span
-          span
-      section
-        .divider
-          div
-           img(src="img/logo-dividers.png", alt="")
-        h2.title Подбор рецептов
-        .select
-          .select__item
-            .item__inner
-              h4 Блюдо дня
-              h3 Куриные ножки на гриле
-              div
-                img(src="img/select/background-icon.png", alt="")
-            img(src="img/select/background-left.png", alt="")
-          .select__item
-            .item__inner
-              h4 Лучшие рецепты недели
-              h3 7 лучших рецептов недели
-              div
-                img(src="img/select/background-icon.png", alt="")
-            img(src="img/select/background-right.png", alt="")
-      section.mt-20
-        .divider
-          div
-           img(src="img/logo-dividers.png", alt="")
-        h2.title Рецепты
-        .recipe
-          ul.tab
-            li.tab__item.tab__item_active Новые репепты
-            li.tab__item Популярные
-            li.tab__item Рекомендуем
-          .recipe__content
-            .card
-              .card__promo.card__promo_left
-                .author
-                  .author__foto
-                    img(src="img/recipe/img/right.png", alt="")
-                  .author__name Daria Fedorenco
-              .card__description
-                .card__description_inner
-                  .description__title
-                    h3 Утиные ножки с овощами и грудинкой фасолью
-                  .description__icons
-                    .icons__item
-                      div
-                        img(src="img/recipe/icons/content-icons/timer-icon.png", alt="")
-                      span 135 мин
-                    .icons__item
-                      div
-                        img(src="img/recipe/icons/content-icons/hat-icon.png", alt="")
-                      span Сложно
-                    .icons__item
-                      div
-                        img(src="img/recipe/icons/content-icons/active-icon.png", alt="")
-                      span 125 ккал
-                  .description__text говядина, масло топлёное, лук репчатый, морковь, редька, перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль, перец чёрный, зелень петрушки...
-                .card__footer
-                  .like__block
-                    .like
-                      img(src="img/recipe/icons/social-icons/like.png", alt="")
-                    .counter
-                      span 0
-                  .social_block
-                    .social__item
-                      a(href="#")
-                        img(src="img/recipe/icons/social-icons/vk.png", alt="")
-                    .social__item
-                      a(href="#")
-                        img(src="img/recipe/icons/social-icons/fb.png", alt="")
-                    .social__item
-                      a(href="#")
-                        img(src="img/recipe/icons/social-icons/ox.png", alt="")
-            .card
-              .card__promo.card__promo_right
-                .author
-                  .author__foto
-                    img(src="img/recipe/img/right.png", alt="")
-                  .author__name Hristin Fedorenco
-              .card__description
-                .card__description_inner
-                  .description__title
-                    h3 Салат из свеклы с козьим сыром и медовой заправкой
-                  .description__icons
-                    .icons__item
-                      div
-                        img(src="img/recipe/icons/content-icons/timer-icon.png", alt="")
-                      span 35 мин
-                    .icons__item
-                      div
-                        img(src="img/recipe/icons/content-icons/hat-icon.png", alt="")
-                      span Сложно
-                    .icons__item
-                      div
-                        img(src="img/recipe/icons/content-icons/active-icon.png", alt="")
-                      span 125 ккал
-                  .description__text говядина, масло топлёное, лук репчатый, морковь, редька, перец сладкий, помидоры, томат-пюре, картофель
-                .card__footer
-                  .like__block
-                    .like
-                      img(src="img/recipe/icons/social-icons/like.png", alt="")
-                    .counter
-                      span 0
-                  .social_block
-                    .social__item
-                      a(href="#")
-                        img(src="img/recipe/icons/social-icons/vk.png", alt="")
-                    .social__item
-                      a(href="#")
-                        img(src="img/recipe/icons/social-icons/fb.png", alt="")
-                    .social__item
-                      a(href="#")
-                        img(src="img/recipe/icons/social-icons/ox.png", alt="")
-          //- .recipe__content
-          //- .recipe__content
-      section.mt-30
-        .divider
-          div
-            img(src="img/logo-dividers.png", alt="")
-        h2.title #Горячая подборка
-        .selection
-          .selection__item
-            .item__inner
-              img(src="img/selection/img/img-1.png", alt="")
-              h3 Утренние рецепты
-          .selection__item
-            .item__inner
-              img(src="img/selection/img/img-2.png", alt="")
-              h3 Масленица
-          .selection__item
-            .item__inner
-              img(src="img/selection/img/img-3.png", alt="")
-              h3 Рецепты для детей
-          .selection__item
-            .item__inner
-              img(src="img/selection/img/img-4.png", alt="")
-              h3 Здоровое питание
-    .space.mt-20
+    header.header
       .container
-        footer.footer
+        .header-block
+          nav.menu
+            ul.menu__list
+              li
+                a.menu__link(href="#") Подбор рецептов
+              li
+                a.menu__link(href="#") Рецепты
+              li
+                a.menu__link(href="#") Горячие рецепты
+          .hamburger
+            span
+            span
+            span
+    main.main
+      .container
+        section.select-block
+          .divider
+            div
+              img(src="img/logo-dividers.png", alt="")
+          h2.title Подбор рецептов
+          .select
+            .select__item
+              .item__inner
+                h4 Блюдо дня
+                h3 Куриные ножки на гриле
+                div
+                  img(src="img/select/background-icon.png", alt="")
+              img(src="img/select/background-left.png", alt="")
+            .select__item
+              .item__inner
+                h4 Лучшие рецепты недели
+                h3 7 лучших рецептов недели
+                div
+                  img(src="img/select/background-icon.png", alt="")
+              img(src="img/select/background-right.png", alt="")
+        section.recipe-block
+          .divider
+            div
+              img(src="img/logo-dividers.png", alt="")
+          h2.title Рецепты
+          .recipe
+            ul.tab
+              li.tab__item.tab__item_active Новые репепты
+              li.tab__item Популярные
+              li.tab__item Рекомендуем
+            .recipe__content
+              .card
+                .card__promo.card__promo_left
+                  .author
+                    .author__foto
+                      img(src="img/recipe/img/right.png", alt="")
+                    .author__name Daria Fedorenco
+                .card__description
+                  .card__description_inner
+                    .description__title
+                      h3 Утиные ножки с овощами и грудинкой фасолью
+                    .description__icons
+                      .icons__item
+                        div
+                          img(src="img/recipe/icons/content-icons/timer-icon.png", alt="")
+                        span 135 мин
+                      .icons__item
+                        div
+                          img(src="img/recipe/icons/content-icons/hat-icon.png", alt="")
+                        span Сложно
+                      .icons__item
+                        div
+                          img(src="img/recipe/icons/content-icons/active-icon.png", alt="")
+                        span 125 ккал
+                    .description__text говядина, масло топлёное, лук репчатый, морковь, редька, перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль, перец чёрный, зелень петрушки...
+                  .card__footer
+                    .like__block
+                      .like
+                        img(src="img/recipe/icons/social-icons/like.png", alt="")
+                      .counter
+                        span 0
+                    .social_block
+                      .social__item
+                        a(href="#")
+                          img(src="img/recipe/icons/social-icons/vk.png", alt="")
+                      .social__item
+                        a(href="#")
+                          img(src="img/recipe/icons/social-icons/fb.png", alt="")
+                      .social__item
+                        a(href="#")
+                          img(src="img/recipe/icons/social-icons/ox.png", alt="")
+              .card
+                .card__promo.card__promo_right
+                  .author
+                    .author__foto
+                      img(src="img/recipe/img/right.png", alt="")
+                    .author__name Hristin Fedorenco
+                .card__description
+                  .card__description_inner
+                    .description__title
+                      h3 Салат из свеклы с козьим сыром и медовой заправкой
+                    .description__icons
+                      .icons__item
+                        div
+                          img(src="img/recipe/icons/content-icons/timer-icon.png", alt="")
+                        span 35 мин
+                      .icons__item
+                        div
+                          img(src="img/recipe/icons/content-icons/hat-icon.png", alt="")
+                        span Сложно
+                      .icons__item
+                        div
+                          img(src="img/recipe/icons/content-icons/active-icon.png", alt="")
+                        span 125 ккал
+                    .description__text говядина, масло топлёное, лук репчатый, морковь, редька, перец сладкий, помидоры, томат-пюре, картофель
+                  .card__footer
+                    .like__block
+                      .like
+                        img(src="img/recipe/icons/social-icons/like.png", alt="")
+                      .counter
+                        span 0
+                    .social_block
+                      .social__item
+                        a(href="#")
+                          img(src="img/recipe/icons/social-icons/vk.png", alt="")
+                      .social__item
+                        a(href="#")
+                          img(src="img/recipe/icons/social-icons/fb.png", alt="")
+                      .social__item
+                        a(href="#")
+                          img(src="img/recipe/icons/social-icons/ox.png", alt="")
+            //- .recipe__content
+            //- .recipe__content
+        section.selection-block
+          .divider
+            div
+              img(src="img/logo-dividers.png", alt="")
+          h2.title #Горячая подборка
+          .selection
+            .selection__item
+              .item__inner
+                img(src="img/selection/img/img-1.png", alt="")
+                h3 Утренние рецепты
+            .selection__item
+              .item__inner
+                img(src="img/selection/img/img-2.png", alt="")
+                h3 Масленица
+            .selection__item
+              .item__inner
+                img(src="img/selection/img/img-3.png", alt="")
+                h3 Рецепты для детей
+            .selection__item
+              .item__inner
+                img(src="img/selection/img/img-4.png", alt="")
+                h3 Здоровое питание
+    footer.footer
+      .container
+        .footer-block
           nav.menu
             ul.menu__list
               li
